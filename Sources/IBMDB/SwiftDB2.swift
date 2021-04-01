@@ -21,10 +21,8 @@ import Dispatch
 // ones
 #if os(Linux)
     import Glibc
-    import IBMCliLinux
 #else
     import Darwin
-    import IBMCliDarwin
 #endif
 
 // Custom named queue
