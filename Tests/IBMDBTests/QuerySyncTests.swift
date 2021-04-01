@@ -34,11 +34,11 @@ extension String {
       #if os(Linux)
       let randomValue = random() % base.characters.count
       #else
-      let randomValue = Int(arc4random_uniform(UInt32(base.characters.count)))
+      let randomValue = Int(arc4random_uniform(UInt32(base.count)))
       #endif
 
       var current = 0
-      for character in base.characters {
+      for character in base {
         if randomValue == current {
           randomString += String(character)
         }

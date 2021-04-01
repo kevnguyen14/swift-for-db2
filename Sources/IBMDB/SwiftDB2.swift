@@ -251,7 +251,7 @@ public class Connection {
             } else {
                 return (false, result)
             }
-        }
+        } 
     }
 
 
@@ -266,7 +266,7 @@ public class Connection {
         }
         switch Int(col_data_type_fetch(Int32(col), result)) {
         default:
-            let dict = ["\(col_name)": String(value)!]
+            let dict = ["\(col_name)": String(value)]
 
             return dict
         }
