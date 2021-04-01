@@ -18,7 +18,5 @@ module IBMCliDarwin [system] [extern_c] {
 	header "/usr/local/include/sql.h"
 	header "/usr/local/include/sqlext.h"
 	header "/usr/local/include/ibm_db.h"
-	link "ibmdb"
-	link "db2"
 	export *
 }
