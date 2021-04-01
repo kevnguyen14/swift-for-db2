@@ -18,7 +18,5 @@ module IBMCliLinux [system] [extern_c] {
 	header "/usr/include/sql.h"
 	header "/usr/include/sqlext.h"
 	header "/usr/local/include/ibm_db.h"
-	link "ibmdb"
-	link "db2"
 	export *
 }
