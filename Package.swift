@@ -20,8 +20,10 @@ let package = Package(
       .target(
           name: "IBMDB",
           dependencies: [.target(name: "IBMDBLinkerDarwin")]),
+      .target(
+          name: "IBMDBLinkerDarwin"),
       .testTarget(
-        name: "IBMDBTests",
-        dependencies: ["IBMDB"]),
+          name: "IBMDBTests",
+          dependencies: ["IBMDB"]),
   ]
 )
