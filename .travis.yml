@@ -1,0 +1,17 @@
+matrix:
+  include:
+    - os: linux
+      services: docker
+      sudo: required
+    - os: osx
+      osx_image: xcode8
+      sudo: required
+
+script:
+  - echo ">> Building and testing Swift SDK for DB2."
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./Build/linux.sh; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./Build/osx.sh; fi
+  - echo ">> Swift SDK for DB2 built and tested. Check above for status."
+
+notifications:
+  slack: ibm-analytics:LgaBAvT7hSn8vGXR4elXTfW1
